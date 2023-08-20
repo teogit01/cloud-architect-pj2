@@ -1,0 +1,32 @@
+Estimate summary,,,,,,,,,
+Upfront cost,Monthly cost,Total 12 months cost,Currency,,,,,,
+0,19892.53,238710.36,USD,,,,,,
+,,* Includes upfront cost,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+Detailed Estimate,,,,,,,,,
+Group hierarchy,Region,Description,Service,Upfront,Monthly,First 12 months total,Currency,Status,Configuration summary
+My Estimate,US East (N. Virginia),VPC,VPN Connection,0,303.47,3641.64,USD,,"Working days per month (22), Number of Site-to-Site VPN Connections (2), Number of subnet associations (4)"
+My Estimate,US East (N. Virginia),VPC,Network Address Translation (NAT) Gateway,0,55.35,664.2,USD,,Number of NAT Gateways (1)
+My Estimate,US East (N. Virginia),VPC,Data Transfer,0,20,240,USD,,"DT Inbound: All other regions (0 TB per month), DT Outbound: All other regions (500 GB per month), DT Intra-Region: (500 GB per month), Data transfer cost (20)"
+My Estimate,US East (N. Virginia),Route 53,Amazon Route 53,0,125.5,1506,USD,,"Hosted Zones (1), Basic Checks Within AWS (300)"
+My Estimate,US East (N. Virginia),S3 bucket,S3 Standard,0,50,600,USD,,"S3 Standard storage (1000 GB per month), Data returned by S3 Select (10000 GB per month), Data scanned by S3 Select (10000 GB per month)"
+My Estimate,US East (N. Virginia),S3 bucket,S3 Object Lambda,0,1.6321108,19.59,USD,,"GET requests from S3 (1000), Duration that the Lambda function is set to execute per request (in ms) (1000), Amount of memory allocated to the Lambda function (10 GB), Size of data returned by S3 Object Lambda (300 MB)"
+My Estimate,US East (N. Virginia),S3 bucket,Data Transfer,0,2,24,USD,,"DT Inbound: All other regions (100 GB per month), DT Outbound: All other regions (100 GB per month)"
+My Estimate,US East (N. Virginia),AWS CloudFront,Amazon CloudFront,0,10.51,126.12,USD,,"Data transfer out to internet (100 GB per month), Data transfer out to origin (100 GB per month), Number of requests (HTTPS) (10000 per month)"
+My Estimate,US East (N. Virginia),Application Load Balancing,Application Load Balancer,0,248.85,2986.2,USD,,Number of Application Load Balancers (2)
+My Estimate,US East (N. Virginia),Elastic IP,Amazon Elastic IP,0,7.54,90.48,USD,,"Number of EC2 instances (2), Number of EIPs per instance (2), Number of EIP remaps (2)"
+My Estimate,US East (N. Virginia),RDS for MySQL,Amazon RDS for MySQL,0,16429.84,197158.08,USD,,"Storage for each RDS instance (Provisioned IOPS SSD (io1)), Storage amount (40000 GB), Provisioning IOPS (), Quantity (1), Instance type (db.m7g.12xlarge), Utilization (On-Demand only) (730 Hours/Month), Deployment option (Multi-AZ), Pricing strategy (OnDemand)"
+My Estimate,US East (N. Virginia),EC2,Amazon EC2 ,0,1011.896,12142.75,USD,,"Tenancy (Shared Instances), Operating system (Linux), Workload (Consistent, Number of instances: 4), Advance EC2 instance (t4g.2xlarge), Pricing strategy (On-Demand Utilization: 100 %Utilized/Month), Enable monitoring (disabled), EBS Storage amount (100 GB), DT Inbound: All other regions (0 TB per month), DT Outbound: Internet (500 GB per month), DT Intra-Region: (500 GB per month)"
+My Estimate,US East (N. Virginia),AWS CloudWatch,Amazon CloudWatch,0,1625.94,19511.28,USD,,"Number of Metrics (includes detailed and custom metrics) (5000), Number of other API requests (1000), GetMetricWidgetImage: Number of metrics requested (1000), GetMetricData: Number of metrics requested (1000), Standard Logs: Data Ingested (100 GB), Logs Delivered to CloudWatch Logs: Data Ingested (100 GB), Logs Delivered to S3: Data Ingested (100 GB)"
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+Acknowledgement,,,,,,,,,
+"* AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services.",,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+With budget 18k-20k I did:,,,,,,,,,
+"Increase 3000GB RDS storage, Increase RDS instance to db.m7g.12xlarge, ",,,,,,,,,
+Added Amazon CloudWatch Service to collect various logs and notify me during any alarms.,,,,,,,,,
